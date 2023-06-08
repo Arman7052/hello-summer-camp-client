@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../../../public/Summer_Fun-removebg-preview.png';
 
 const Footer = () => {
@@ -10,6 +11,8 @@ const Footer = () => {
 
             </div>
             <div>
+                <p className='mx-auto'><Link>About us</Link></p>
+                <p className='mx-auto'><Link>Contact</Link></p>
                 <p>Copyright © 2023 - All right reserved</p>
             </div>
             <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
