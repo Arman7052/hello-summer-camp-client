@@ -16,7 +16,7 @@ const PopularInstructors = () => {
 
         fetchData();
 
-        AOS.init(); // Initialize AOS
+        AOS.init(); 
     }, []);
 
     const sortedInstructors = instructorsData.sort((a, b) => b.number_of_students - a.number_of_students);
@@ -34,8 +34,8 @@ const PopularInstructors = () => {
                     <li
                         key={instructorData.id}
                         className="bg-indigo-300 w-2/4 mx-auto rounded-lg shadow-md p-2"
-                        data-aos="fade-up" // Add data-aos attribute for animation
-                        data-aos-delay={(index + 1) * 100} // Add delay for staggered animation
+                        data-aos="fade-up" 
+                        data-aos-delay={(index + 1) * 100} 
                     >
                         <h2 className="text-lg text-center font-serif italic font-bold">{instructorData.instructor_name}</h2>
                         <p className='text-center font-bold font-serif text-base'>Instructor of: {instructorData.sport} </p>
