@@ -1,0 +1,142 @@
+[
+    {
+      "id": 1,
+      "sport": "Basketball",
+      "number_of_students": 20,
+      "instructor_name": "John Smith",
+      "duration": "2 hours"
+    },
+    {
+      "id": 2,
+      "sport": "Soccer",
+      "number_of_students": 25,
+      "instructor_name": "Sarah Johnson",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 3,
+      "sport": "Swimming",
+      "number_of_students": 30,
+      "instructor_name": "Michael Davis",
+      "duration": "1 hour"
+    },
+    {
+      "id": 4,
+      "sport": "Tennis",
+      "number_of_students": 18,
+      "instructor_name": "Emily Anderson",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 5,
+      "sport": "Gymnastics",
+      "number_of_students": 21,
+      "instructor_name": "David Wilson",
+      "duration": "2 hours"
+    },
+    {
+      "id": 6,
+      "sport": "Baseball",
+      "number_of_students": 22,
+      "instructor_name": "Jessica Thompson",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 7,
+      "sport": "Volleyball",
+      "number_of_students": 26,
+      "instructor_name": "Daniel Martinez",
+      "duration": "2 hours"
+    },
+    {
+      "id": 8,
+      "sport": "Track and Field",
+      "number_of_students": 29,
+      "instructor_name": "Olivia Adams",
+      "duration": "1 hour"
+    },
+    {
+      "id": 9,
+      "sport": "Badminton",
+      "number_of_students": 16,
+      "instructor_name": "William Turner",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 10,
+      "sport": "Hockey",
+      "number_of_students": 24,
+      "instructor_name": "Sophia Campbell",
+      "duration": "2 hours"
+    },
+    {
+      "id": 11,
+      "sport": "Archery",
+      "number_of_students": 15,
+      "instructor_name": "Alexander Hall",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 12,
+      "sport": "Golf",
+      "number_of_students": 19,
+      "instructor_name": "Grace Lee",
+      "duration": "1 hour"
+    },
+    {
+      "id": 13,
+      "sport": "Karate",
+      "number_of_students": 31,
+      "instructor_name": "Christopher Baker",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 14,
+      "sport": "Yoga",
+      "number_of_students": 17,
+      "instructor_name": "Ava Walker",
+      "duration": "1 hour"
+    },
+    {
+      "id": 15,
+      "sport": "Cycling",
+      "number_of_students": 23,
+      "instructor_name": "Noah Cooper",
+      "duration": "2 hours"
+    },
+    {
+      "id": 16,
+      "sport": "Martial Arts",
+      "number_of_students": 32,
+      "instructor_name": "Charlotte Wright",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 17,
+      "sport": "Dance",
+      "number_of_students": 16,
+      "instructor_name": "Ethan Mitchell",
+      "duration": "2 hours"
+    },
+    {
+      "id": 18,
+      "sport": "Cricket",
+      "number_of_students": 50,
+      "instructor_name": "Lily Green",
+      "duration": "1 hour"
+    },
+    {
+      "id": 19,
+      "sport": "Rugby",
+      "number_of_students": 22,
+      "instructor_name": "James Baker",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": 20,
+      "sport": "Table Tennis",
+      "number_of_students": 10,
+      "instructor_name": "Isabella Turner",
+      "duration": "1 hour"
+    }
+  ]
