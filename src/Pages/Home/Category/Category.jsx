@@ -7,7 +7,7 @@ const Category = () => {
         <section className=" py-10 ">
             <SectionTitle
                 subheading={"Explore Here"}
-                heading={"Our School Activities"}
+                heading={"OUR SCHOOL ACTIVITIES"}
             >
 
             </SectionTitle>
@@ -38,10 +38,11 @@ const Category = () => {
                     <h2 className=" lg:text-4xl pb-2 uppercase -mt-12 font-serif shadow-2xl text-white">Cricket</h2>
                 </SwiperSlide>
 
-                <SwiperSlide><img src="https://images.unsplash.com/photo-1629431390633-0e70fdf7886e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Vm9sbGV5YmFsbHxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" alt="https://images.unsplash.com/photo-1629431390633-0e70fdf7886e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Vm9sbGV5YmFsbHxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" />
+                <SwiperSlide><img src="https://images.unsplash.com/photo-1629431390633-0e70fdf7886e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Vm9sbGV5YmFsbHxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" 
+                className="rounded-md"  alt="https://images.unsplash.com/photo-1629431390633-0e70fdf7886e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Vm9sbGV5YmFsbHxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" />
                     <h2 className=" lg:text-4xl pb-2 uppercase -mt-12 font-serif shadow-2xl text-white">Volleyball</h2>
                 </SwiperSlide>
-                <SwiperSlide><img className="h-auto" src="https://images.unsplash.com/photo-1510925751334-0fe90906839b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXJjaGVyeXxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" alt="https://images.unsplash.com/photo-1510925751334-0fe90906839b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXJjaGVyeXxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" />
+                <SwiperSlide><img className="h-auto rounded-md" src="https://images.unsplash.com/photo-1510925751334-0fe90906839b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXJjaGVyeXxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" alt="https://images.unsplash.com/photo-1510925751334-0fe90906839b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXJjaGVyeXxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" />
                     <h2 className=" lg:text-4xl pb-2 uppercase -mt-12 font-serif shadow-2xl text-white">Archery</h2>
                 </SwiperSlide>
 
