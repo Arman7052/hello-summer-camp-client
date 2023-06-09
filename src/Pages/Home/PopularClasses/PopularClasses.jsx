@@ -32,7 +32,7 @@ const PopularClasses = () => {
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {topClasses.map((classData, index) => (
           <li
-            key={classData.id}
+            key={classData._id}
             className="bg-transparent shadow-md p-2"
             data-aos="fade-left"
             data-aos-delay={(index + 1) * 200}
