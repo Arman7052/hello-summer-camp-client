@@ -29,17 +29,20 @@ const PopularInstructors = () => {
                 subheading={"Here is"}
                 heading={"Our Popular Instructors"}
             ></SectionTitle>
-            <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 py-2">
                 {topInstructors.map((instructorData, index) => (
                     <li
                         key={instructorData.id}
-                        className="bg-indigo-300 w-2/4 mx-auto rounded-lg shadow-md p-2"
+                        className=" w-3/4 h-80 mx-auto rounded-lg shadow-md"
                         data-aos="fade-up" 
-                        data-aos-delay={(index + 1) * 100} 
+                        data-aos-delay={(index + 1) * 300} 
+                        style={{ backgroundImage: `linear-gradient(to bottom, rgba(63, 63, 63, 0) 0%, rgba(63, 63, 63, 0.5) 100%), url(${instructorData.img})`, backgroundSize: 'cover' }}
                     >
-                        <h2 className="text-lg text-center font-serif italic font-bold">{instructorData.instructor_name}</h2>
-                        <p className='text-center font-bold font-serif text-base'>Instructor of: {instructorData.sport} </p>
-                        <p className='text-center font-bold font-serif text-base'>Number of Students: {instructorData.number_of_students}</p>
+                        <div className="bg-gradient-to-b rounded-md from-indigo-600 via-transparent to-transparent h-full">
+                        <h2 className="text-lg text-center font-serif italic py-2 text-black font-bold">{instructorData.instructor_name}</h2>
+                        <p className='text-center font-bold font-serif text-base text-black shadow-2xl'>Instructor of: {instructorData.sport} </p>
+                        <p className='text-center font-bold font-serif text-base text-black shadow-2xl'>Number of Students: {instructorData.number_of_students}</p>
+                        </div>
                     </li>
                 ))}
             </ul>

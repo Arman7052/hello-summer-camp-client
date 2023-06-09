@@ -16,7 +16,7 @@ const PopularClasses = () => {
 
     fetchData();
 
-    AOS.init(); // Initialize AOS
+    AOS.init();
   }, []);
 
   const sortedClasses = classesData.sort((a, b) => b.number_of_students - a.number_of_students);
@@ -34,8 +34,8 @@ const PopularClasses = () => {
           <li
             key={classData.id}
             className="bg-transparent shadow-md p-2"
-            data-aos="fade-left" // Add data-aos attribute for animation
-            data-aos-delay={(index + 1) * 200} // Add delay for staggered animation
+            data-aos="fade-left"
+            data-aos-delay={(index + 1) * 200}
           >
             <div className='py-2'>
               <h2 className="text-lg text-center font-serif font-bold">{classData.sport}</h2>
