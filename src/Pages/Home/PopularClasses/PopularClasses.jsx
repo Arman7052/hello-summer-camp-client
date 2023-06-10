@@ -1,34 +1,22 @@
-import { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import SectionTitle from '../../../Component/SectionTitle/SectionTitle';
+import {  Flip } from "react-awesome-reveal";
+import useInstructors from '../../../CustomHooks/useInstructors';
 
 const PopularClasses = () => {
-  const [classesData, setClassesData] = useState([]);
+ const [instructorData] =useInstructors();
 
-  useEffect(() => {
-    const fetchData = () => {
-      fetch('instructor.json')
-        .then(response => response.json())
-        .then(data => setClassesData(data))
-        .catch(error => console.error('Error fetching classes data:', error));
-    };
-
-    fetchData();
-
-    AOS.init();
-  }, []);
-
-  const sortedClasses = classesData.sort((a, b) => b.number_of_students - a.number_of_students);
+  const sortedClasses = instructorData.sort((a, b) => b.number_of_students - a.number_of_students);
 
   const topClasses = sortedClasses.slice(0, 6);
 
   return (
     <div className="container mx-auto p-4 py-5">
+      <Flip direction="down" duration={2000}>
       <SectionTitle
         subheading={"Here is"}
         heading={"Our Popular classes"}
       ></SectionTitle>
+      </Flip>
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {topClasses.map((classData, index) => (
           <li

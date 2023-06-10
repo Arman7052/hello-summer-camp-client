@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SectionTitle from "../../../Component/SectionTitle/SectionTitle";
+import { Flip } from "react-awesome-reveal";
 
 const Category = () => {
     return (
         <section className=" py-10 ">
+            <Flip direction="down" duration={2000}>
             <SectionTitle
                 subheading={"Explore Here"}
                 heading={"OUR SCHOOL ACTIVITIES"}
@@ -12,6 +14,7 @@ const Category = () => {
 
             </SectionTitle>
 
+            </Flip>
 
             <Swiper
                 slidesPerView={3}
