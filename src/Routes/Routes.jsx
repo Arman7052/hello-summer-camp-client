@@ -5,6 +5,10 @@ import Error from "../Error";
 import Instructors from "../Pages/Instructors/Instructors";
 import Login from "../Pages/Login&SignUp/Login";
 import SignUp from "../Pages/Login&SignUp/SignUp";
+import DashBoard from "../Layouts/DashBoard";
+import PrivateRoute from "../Routes/PrivateRoute";
+
+
 
 export const router = createBrowserRouter([
     {
@@ -29,5 +33,9 @@ export const router = createBrowserRouter([
     {
       path: 'signup',
       element: <SignUp></SignUp>,
+    },
+    {
+      path: 'dashboard',
+      element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
     },
   ]);

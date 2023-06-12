@@ -5,6 +5,9 @@ import Swal from 'sweetalert2'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogin from '../Home/Shared/SocialLogin/SocialLogin';
+import Navbar from '../Home/Shared/Navbar';
+import Footer from '../Home/Shared/Footer';
 
 
 
@@ -43,16 +46,17 @@ const Login = () => {
 
     return (
 
-        <div style={{ backgroundImage: `url(${loginBG})` }}>
+        <div className='lg:max-w-7xl mx-auto' style={{ backgroundImage: `url(${loginBG})` }}>
             <Helmet>
                 <title> Bistro Boss | Login</title>
 
             </Helmet>
-            
-            <div className="hero min-h-screen shadow-xl">
+            <Navbar></Navbar>
+            <h1 className="text-5xl font-bold pt-36 font-serif italic text-center py-10">Login Now!</h1>
+            <div className="hero min-h-screen shadow-xl pb-10">
                 <div className="hero-content flex-col lg:flex-row shadow-2xl">
                     <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold font-serif italic text-center py-10">Login Now!</h1>
+                   
                         <img src={loginimg} alt={loginimg} />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
@@ -79,11 +83,12 @@ const Login = () => {
                         </form>
                         <div className='divider mx-3 italic'>Login With</div>
                         
-
+                            <SocialLogin></SocialLogin>
                         <p className=' text-center py-5 font-semibold font-mono'><small>New Here? <Link to="/signup" className=" underline  italic">Create an account</Link> </small></p>
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
