@@ -47,9 +47,8 @@ const Login = () => {
     return (
 
         <div className='lg:max-w-7xl mx-auto' style={{ backgroundImage: `url(${loginBG})` }}>
-            <Helmet>
-                <title> Bistro Boss | Login</title>
-
+             <Helmet>
+                <title> Summer Edutainment | Log In</title>
             </Helmet>
             <Navbar></Navbar>
             <h1 className="text-5xl font-bold pt-36 font-serif italic text-center py-10">Login Now!</h1>
