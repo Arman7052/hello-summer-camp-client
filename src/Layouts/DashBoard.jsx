@@ -8,6 +8,7 @@ import { MdOutlineClass } from "react-icons/md";
 const DashBoard = () => {
 
   const isAdmin = true;
+  const isInstrutor = true;
   
   return (
     <div className="lg:max-w-screen-xl mx-auto">
@@ -36,7 +37,7 @@ const DashBoard = () => {
               <li className="hover:text-indigo-500 ">
               <NavLink className='bg-transparent' to='/dashboard/manageClasses'> <MdOutlineClass></MdOutlineClass> Manage Classes </NavLink>
             </li>
-              </>: <>
+              </>: isInstrutor? <>
               <li className="hover:text-indigo-500 ">
               <NavLink className='bg-transparent' to='/dashboard/selectedClasses'> <FaUserClock></FaUserClock> Selected Classes </NavLink>
             </li>
@@ -46,7 +47,7 @@ const DashBoard = () => {
             <li className="hover:text-indigo-500 ">
               <NavLink className='bg-transparent' to='/dashboard/paymentHistory'> <GiWallet></GiWallet> Payment History </NavLink>
             </li>
-              </>
+              </>:<></>
             }
 
            

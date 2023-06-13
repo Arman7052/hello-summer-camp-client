@@ -2,13 +2,63 @@ import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import { FaTrashAlt, FaUserEdit, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
+import SectionTitle from "../../../Component/SectionTitle/SectionTitle";
 
 
 const AllUser = () => {
+
+
+
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await fetch('http://localhost:7052/users')
         return res.json();
     })
+
+    const handleMakeAdmin = user =>{
+        fetch(`http://localhost:7052/users/admin/${user._id}`, {
+            method: 'PATCH'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.modifiedCount){
+                refetch()
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${user.name} is an Admin now !`,
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+            }
+        })
+
+    }
+
+
+   const handleMakeInstructor = user =>{
+    fetch(`http://localhost:7052/users/instructor/${user._id}`, {
+        method: 'PATCH'
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        if(data.modifiedCount){
+            refetch()
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: `${user.name} is an Instructor now !`,
+                showConfirmButton: false,
+                timer: 1500,
+              });
+        }
+    })
+
+}
+
+
+
 
     const handleDelete = user =>{
         Swal.fire({
@@ -30,7 +80,7 @@ const AllUser = () => {
                             refetch();
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'User has been deleted.',
                                 'success'
                             )
                         }
@@ -42,8 +92,13 @@ const AllUser = () => {
     return (
         <div className="w-full">
             <Helmet>
-                <title>Summer Edutainment | All users</title>
+                <title>Summer Edutainment |Manage users</title>
             </Helmet>
+            <SectionTitle
+            subheading={'User  '}
+            heading={'Management'}
+            ></SectionTitle>
+
             <h3 className="text-3xl font-semibold my-4">Total Users: {users.length}</h3>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
@@ -65,8 +120,10 @@ const AllUser = () => {
                                 <td>{user.email}</td>
                                 <td>{user.role === 'admin' ? 'admin' :
                                     <div className="flex gap-3">
-                                        <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-orange-600 text-xs text-white"><FaUserShield></FaUserShield>Admin</button>
-                                        <button onClick={() => handleMakeInstructor(user)} className="btn btn-ghost bg-orange-300 text-xs  text-black"><FaUserEdit></FaUserEdit> Instructor</button>
+                                        <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-orange-600 text-xs text-white"><FaUserShield></FaUserShield>Admin</button> 
+                                        {user.role === 'instructor' ? 'instructor' :
+                                            <button onClick={() => handleMakeInstructor(user)} className="btn btn-ghost bg-orange-300 text-xs  text-black"><FaUserEdit></FaUserEdit> Instructor</button>
+                                        }
                                     </div>
                                    
                                     
