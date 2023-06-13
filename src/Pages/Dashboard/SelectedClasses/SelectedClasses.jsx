@@ -51,7 +51,7 @@ const SelectedClasses = () => {
             ></SectionTitle>
             <div className=" text-semibold text-black flex flex-row justify-between py-5">
                 <h1> Total Classes : {selectedClass.length}</h1>
-                <h1> Total Price : $ {total}</h1>
+                <h1> Total Fees : $ {total}</h1>
 
             </div>
             <div className="overflow-x-auto ">
@@ -62,7 +62,7 @@ const SelectedClasses = () => {
                             <th>#</th>
                             <th>ITEM IMAGE</th>
                             <th>ITEM NAME</th>
-                            <th>PRICE</th>
+                            <th>Fee</th>
                             <th>ACTION</th>
                             <th>PAYMENT</th>
                         </tr>

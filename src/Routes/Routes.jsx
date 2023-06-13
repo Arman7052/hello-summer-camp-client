@@ -10,6 +10,9 @@ import PrivateRoute from "../Routes/PrivateRoute";
 import SelectedClasses from "../Pages/Dashboard/SelectedClasses/SelectedClasses";
 import EnrolledClasses from "../Pages/Dashboard/EnrolledClasses/EnrolledClasses";
 import Classes from "../Pages/Classes/Classes";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import AllUser from "../Pages/Dashboard/AllUser/AllUser";
+import ManageClasses from "../Pages/Dashboard/ManageClasses/ManageClasses";
 
 
 
@@ -53,6 +56,18 @@ export const router = createBrowserRouter([
         {
           path:'enrolledClasses',
           element:<EnrolledClasses></EnrolledClasses>
+        },
+        {
+          path: 'paymentHistory',
+          element: <PaymentHistory></PaymentHistory>
+        },
+        {
+          path: 'allUser',
+          element: <AllUser></AllUser>
+        },
+        {
+          path: 'manageClasses',
+          element: <ManageClasses></ManageClasses>
         }
       ]
     },

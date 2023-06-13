@@ -62,6 +62,8 @@ const ClassCard = ({item}) => {
                         >
                             <div className="bg-gradient-to-b rounded-md from-indigo-600 via-transparent to-transparent h-full">
                                 <h2 className="text-lg text-center font-serif italic py-2 text-black font-bold">{item.sport}</h2>
+                                <h2 className="text-lg text-center font-serif italic py-2 text-black font-bold">Fee: ${item.price}</h2>
+                                
                                 <div className="card">
                                    
 
