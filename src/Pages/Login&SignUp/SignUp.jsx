@@ -29,7 +29,7 @@ const SignUp = () => {
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
           const saveUser = { name: data.name, email: data.email };
-          fetch("http://localhost:5000/users", {
+          fetch("http://localhost:7052/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -67,7 +67,7 @@ const SignUp = () => {
            <Helmet>
                 <title> Summer Edutainment | SignUp</title>
             </Helmet>
-          <h1 className="text-5xl font-bold font-serif text-center italic py-36">
+          <h1 className="text-5xl font-bold font-serif text-orange-600 text-center italic pt-40">
             Sign up now!
           </h1>
           <div className="hero min-h-screen pb-10">
@@ -180,7 +180,7 @@ const SignUp = () => {
                   </div>
                   <div className="form-control mt-6">
                     <input
-                      className="btn bg-[#D1A054] text-white"
+                      className="btn bg-orange-600 text-white"
                       type="submit"
                       value="Sign Up"
                     />
@@ -191,7 +191,7 @@ const SignUp = () => {
                 <p className="text-center py-5 font-semibold font-mono ">
                   <small>
                     Already have an account{" "}
-                    <Link to="/login" className=" underline italic">
+                    <Link to="/login" className=" underline text-orange-600 italic">
                       Login
                     </Link>
                   </small>

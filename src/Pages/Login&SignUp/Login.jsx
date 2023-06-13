@@ -51,7 +51,7 @@ const Login = () => {
                 <title> Summer Edutainment | Log In</title>
             </Helmet>
             <Navbar></Navbar>
-            <h1 className="text-5xl font-bold pt-36 font-serif italic text-center py-10">Login Now!</h1>
+            <h1 className="text-5xl text-orange-600 font-bold pt-36 font-serif italic text-center py-10">Login Now!</h1>
             <div className="hero min-h-screen shadow-xl pb-10">
                 <div className="hero-content flex-col lg:flex-row shadow-2xl">
                     <div className="text-center lg:text-left">
@@ -77,13 +77,13 @@ const Login = () => {
                             </div>
                            
                             <div className="form-control mt-6">
-                                <input disabled={false} className="btn bg-[#D1A054] text-white" type="submit" value="Login" />
+                                <input className="btn bg-orange-500 text-white" type="submit" value="Login" />
                             </div>
                         </form>
                         <div className='divider mx-3 italic'>Login With</div>
                         
                             <SocialLogin></SocialLogin>
-                        <p className=' text-center py-5 font-semibold font-mono'><small>New Here? <Link to="/signup" className=" underline  italic">Create an account</Link> </small></p>
+                        <p className=' text-center py-5 font-semibold font-mono'><small>New Here? <Link to="/signup" className=" underline text-orange-600 italic">Create an account</Link> </small></p>
                     </div>
                 </div>
             </div>

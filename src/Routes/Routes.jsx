@@ -7,6 +7,9 @@ import Login from "../Pages/Login&SignUp/Login";
 import SignUp from "../Pages/Login&SignUp/SignUp";
 import DashBoard from "../Layouts/DashBoard";
 import PrivateRoute from "../Routes/PrivateRoute";
+import SelectedClasses from "../Pages/Dashboard/SelectedClasses/SelectedClasses";
+import EnrolledClasses from "../Pages/Dashboard/EnrolledClasses/EnrolledClasses";
+import Classes from "../Pages/Classes/Classes";
 
 
 
@@ -23,7 +26,11 @@ export const router = createBrowserRouter([
         {
           path:'instructors',
           element: <Instructors></Instructors>
-        }
+        },
+        {
+          path:'classes',
+          element: <Classes></Classes>
+        },
       ]
     },
     {
@@ -37,5 +44,16 @@ export const router = createBrowserRouter([
     {
       path: 'dashboard',
       element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
+      errorElement:<Error></Error>,
+      children:[
+        {
+          path:"selectedClasses",
+          element: <SelectedClasses></SelectedClasses>
+        },
+        {
+          path:'enrolledClasses',
+          element:<EnrolledClasses></EnrolledClasses>
+        }
+      ]
     },
   ]);
