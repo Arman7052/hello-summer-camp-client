@@ -4,6 +4,7 @@ import Navbar from "../Pages/Home/Shared/Navbar";
 import {  FaUserClock, FaUserEdit } from "react-icons/fa";
 
 const DashBoard = () => {
+  
   return (
     <div className="lg:max-w-screen-xl mx-auto">
       <Navbar></Navbar>
