@@ -28,8 +28,8 @@ const SignUp = () => {
       console.log(loggedUser);
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
-          const saveUser = { name: data.name, email: data.email };
-          fetch("http://localhost:7052/users", {
+          const saveUser = { name: data.name, email: data.email , role:'user' };
+          fetch("https://hello-summer-camp-server.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

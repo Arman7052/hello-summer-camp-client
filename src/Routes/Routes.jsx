@@ -13,6 +13,9 @@ import Classes from "../Pages/Classes/Classes";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import AllUser from "../Pages/Dashboard/AllUser/AllUser";
 import ManageClasses from "../Pages/Dashboard/ManageClasses/ManageClasses";
+import AddClass from "../Pages/Dashboard/AddClass/AddClass";
+import MyClass from "../Pages/Dashboard/MyClass/MyClass";
+
 
 
 
@@ -63,11 +66,20 @@ export const router = createBrowserRouter([
         },
         {
           path: 'allUser',
-          element: <AllUser></AllUser>
+          element:<AllUser></AllUser>
         },
         {
           path: 'manageClasses',
-          element: <ManageClasses></ManageClasses>
+          element:<ManageClasses></ManageClasses>
+        },
+        {
+          path: 'addClass',
+          element: <AddClass></AddClass>,
+
+        },
+        {
+          path: 'myClass',
+          element: <MyClass></MyClass>
         }
       ]
     },

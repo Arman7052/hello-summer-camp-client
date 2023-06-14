@@ -1,15 +1,16 @@
 import { Helmet } from "react-helmet-async";
-import useSelectedClass from "../../../CustomHooks/useSelectedClass";
+
 
 import SectionTitle from "../../../Component/SectionTitle/SectionTitle";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useSelectedClass from "../../../CustomHooks/useSelectedClass";
 
 
 const SelectedClasses = () => {
     const [selectedClass, refetch] = useSelectedClass();
     console.log(selectedClass);
-    const total = selectedClass.reduce((sum, item) => item.price + sum, 0);
+    const total = selectedClass.reduce((sum,item) => item.price + sum,0)
     const handleDelete = item => {
         Swal.fire({
             title: 'Are you sure?',
@@ -21,7 +22,7 @@ const SelectedClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:7052/selectedClasses/${item._id}`, {
+                fetch(`https://hello-summer-camp-server.vercel.app/selectedClasses/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

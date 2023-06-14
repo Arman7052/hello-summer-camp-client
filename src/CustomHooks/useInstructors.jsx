@@ -6,7 +6,7 @@ const useInstructors = () => {
     const [loading, setLoading] =useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:7052/instructors')
+        fetch('https://hello-summer-camp-server.vercel.app/instructors')
             .then(response => response.json())
             .then(data => {
                 setInstructorsData(data);

@@ -13,7 +13,7 @@ const ClassCard = ({item}) => {
         console.log(item);
         if (user && user.email) {
             const classes = {  classId: _id, email: user.email , sport, img, price}
-            fetch('http://localhost:7052/selectedClasses', {
+            fetch('https://hello-summer-camp-server.vercel.app/selectedClasses', {
                 method: 'POST',
                 headers: {
                     'content-type' : 'application/json'
