@@ -23,7 +23,7 @@ const ChooseUs = () => {
            ></SectionTitle>
             </Flip>
             <JackInTheBox delay={1000} cascade damping={0.2}>
-            <p className="mb-5">
+            <p className="mb-5 font-mono font-semibold text-yellow-300">
                Experience the ultimate summer edutainment on our website. With engaging and interactive programs designed for children of all ages, we offer a unique learning experience like no other. Our team of expert instructors brings their extensive knowledge and passion to each activity, ensuring a high-quality educational experience. From a diverse range of activities to flexible scheduling options, we prioritize your convenience. Our safe and secure learning environment provides parents with peace of mind. Join us for an unforgettable summer of growth, friendship, and fun. Register now and unlock a world of opportunities for your child personal development. Discover why we are the top choice for summer edutainment, where learning and entertainment go hand in hand.
              </p>
             </JackInTheBox>

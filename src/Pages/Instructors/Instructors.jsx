@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../Component/SectionTitle/SectionTitle";
-import { Flip, Bounce } from "react-awesome-reveal";
+import { Bounce, JackInTheBox, Fade, Zoom } from "react-awesome-reveal";
 import useInstructors from "../../CustomHooks/useInstructors";
 
 
@@ -45,24 +45,32 @@ const Instructors = () => {
             ></SectionTitle>
 
 
-            <Flip cascade damping={0.5}>
-                <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 py-2">
-                    {instructorsData.map((instructorData) => (
-                        <li
-                            key={instructorData._id}
-                            className=" w-3/4 h-80 mx-auto rounded-lg shadow-md"
-                            
-                            style={{ backgroundImage: `linear-gradient(to bottom, rgba(63, 63, 63, 0) 0%, rgba(63, 63, 63, 0.5) 100%), url(${instructorData.instructor_img})`, backgroundSize: 'cover' }}
-                        >
-                            <div className="bg-gradient-to-b rounded-md from-indigo-600 via-transparent to-transparent h-full">
-                                <h2 className="text-lg text-center font-serif italic py-2 text-black font-bold">{instructorData.instructor_name}</h2>
-                                <p className='text-center font-bold font-serif text-base text-black shadow-2xl'>Email: {instructorData.email}</p>
-                                <p className='text-center font-bold font-serif text-base text-black shadow-2xl'>Instructor of: {instructorData.sport} </p>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </Flip>
+
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-2">
+                {instructorsData.map((instructorData) => (
+                    <li key={instructorData._id} className="py-5">
+                      
+
+                        <div className=" flex justify-center">
+                            <JackInTheBox duration={4000}>
+                                <img className="h-16 w-16 rounded-full" src={instructorData.instructor_img} alt={instructorData.instructor_img} />
+                            </JackInTheBox>
+                        </div>
+                        <Fade direction="left" duration={1000} >
+                            <h2 className="text-lg text-center font-serif italic py-2 text-black font-bold">{instructorData.instructor_name}
+                            </h2>
+                        </Fade>
+                        <Zoom duration={4000}>
+                            <p className='text-center font-bold font-serif text-base'>Email: {instructorData.email}</p>
+                            <p className='text-center font-bold font-serif text-base'>Instructor of: {instructorData.sport}
+                            </p>
+                        </Zoom>
+
+
+                    </li>
+                ))}
+            </ul>
+
 
         </div>
     );

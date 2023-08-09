@@ -6,18 +6,20 @@ import PopularInstructors from "./PopularInstructors/PopularInstructors";
 import Banner from "./Shared/Banner";
 
 
+
 const Home = () => {
     return (
-        <div>
-             <Helmet>
+        <div className="max-w-7xl mx-auto ">
+            <Helmet>
                 <title> Summer Edutainment | Home</title>
 
             </Helmet>
-           <Banner></Banner>
-           <Category></Category>
-           <PopularClasses></PopularClasses>
-           <PopularInstructors></PopularInstructors>
-           <ChooseUs></ChooseUs>
+            
+            <Banner></Banner>
+            <Category></Category>
+            <PopularClasses></PopularClasses>
+            <PopularInstructors></PopularInstructors>
+            <ChooseUs></ChooseUs>
         </div>
     );
 };

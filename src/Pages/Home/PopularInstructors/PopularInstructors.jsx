@@ -1,13 +1,13 @@
 
 import SectionTitle from "../../../Component/SectionTitle/SectionTitle";
-import { JackInTheBox, Flip } from "react-awesome-reveal";
+import { Fade, JackInTheBox, Zoom } from "react-awesome-reveal";
 import useInstructors from "../../../CustomHooks/useInstructors";
 
 const PopularInstructors = () => {
-   const [instructorsData] = useInstructors()
-   
-  
-    
+    const [instructorsData] = useInstructors()
+
+
+
 
     const sortedInstructors = instructorsData.sort((a, b) => b.number_of_students - a.number_of_students);
 
@@ -15,31 +15,36 @@ const PopularInstructors = () => {
 
     return (
         <div className="container mx-auto p-4 py-5">
-            <Flip direction="down" duration={2000}>
-            <SectionTitle
-                subheading={"Find Our"}
-                heading={"Popular Instructors"}
-            ></SectionTitle>
-            </Flip>
-           <JackInTheBox cascade damping={0.2}>
-           <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 py-2">
-                {topInstructors.map((instructorData, index) => (
-                    <li
-                        key={instructorData._id}
-                        className=" w-3/4 h-80 mx-auto rounded-lg shadow-md"
-                        data-aos="fade-up" 
-                        data-aos-delay={(index + 1) * 100} 
-                        style={{ backgroundImage: `linear-gradient(to bottom, rgba(63, 63, 63, 0) 0%, rgba(63, 63, 63, 0.5) 100%), url(${instructorData.img})`, backgroundSize: 'cover' }}
-                    >
-                        <div className="bg-gradient-to-b rounded-md from-indigo-600 via-transparent to-transparent h-full">
-                        <h2 className="text-lg text-center font-serif italic py-2 text-black font-bold">{instructorData.instructor_name}</h2>
-                        <p className='text-center font-bold font-serif text-base text-black shadow-2xl'>Instructor of: {instructorData.sport} </p>
-                        <p className='text-center font-bold font-serif text-base text-black shadow-2xl'>Number of Students: {instructorData.number_of_students}</p>
+            <Fade direction="down" duration={2000}>
+                <SectionTitle
+                    subheading={"Find Our"}
+                    heading={"Popular Instructors"}
+                ></SectionTitle>
+            </Fade>
+
+            <ul className="grid grid-cols-1 lg:grid-cols-3 gap-1 py-2">
+                {topInstructors.map((instructorData) => (
+                    <li key={instructorData._id}  className=" py-2">
+                        <div  className=" flex justify-center">
+                           <JackInTheBox duration={4000}>
+                           <img className="h-16 w-16 rounded-full" src={instructorData.instructor_img} alt={instructorData.instructor_img} />
+                           </JackInTheBox>
                         </div>
+                       <Fade direction="left" duration={1000}>
+                       <h2 className="text-lg text-center font-serif italic py-2 text-black font-bold">{instructorData.instructor_name}
+                        </h2>
+                       </Fade>
+                       <Zoom duration={4000}>
+                       <p className='text-center font-bold font-serif text-base '>Instructor of: {instructorData.sport} </p>
+                        <p className='text-center font-bold font-serif text-base '>Number of Students: {instructorData.number_of_students}
+                        </p>
+                       </Zoom>
+
+                       
                     </li>
                 ))}
             </ul>
-           </JackInTheBox>
+
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../../../../public/Summer_Fun-removebg-preview.png';
+import logo from '../../../../src/assets/Summer_Fun-removebg-preview.png';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
@@ -64,7 +64,7 @@ const Navbar = () => {
         </>
 
     return (
-        <div className="navbar fixed z-10 bg-opacity-60 bg-gray-800  text-orange-500 lg:max-w-screen-xl mx-auto font-serif italic">
+        <div className="navbar fixed z-10 bg-opacity-60  bg-gray-500  text-yellow-300 lg:max-w-screen-xl mx-auto font-mono italic">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

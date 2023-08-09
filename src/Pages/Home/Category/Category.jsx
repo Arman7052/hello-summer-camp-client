@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SectionTitle from "../../../Component/SectionTitle/SectionTitle";
-import { Flip } from "react-awesome-reveal";
+
 
 const Category = () => {
     return (
-        <section className=" py-10 ">
-            <Flip direction="down" duration={2000}>
+        <section className=" py-10" >
+            
             <SectionTitle
                 subheading={"Explore Here"}
                 heading={"OUR SCHOOL ACTIVITIES"}
@@ -14,7 +14,7 @@ const Category = () => {
 
             </SectionTitle>
 
-            </Flip>
+        
 
             <Swiper
                 slidesPerView={3}
@@ -22,7 +22,7 @@ const Category = () => {
                 pagination={{
                     clickable: true,
                 }}
-
+                
                 className="mySwiper text-center "
             >
                 <SwiperSlide><img src="https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFza2V0YmFsbHxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" className=" rounded-md" alt="https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFza2V0YmFsbHxlbnwwfDF8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60" />

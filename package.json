@@ -18,6 +18,7 @@
     "firebase": "^9.22.1",
     "jsonwebtoken": "^9.0.0",
     "localforage": "^1.10.0",
+    "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.3",
@@ -27,6 +28,7 @@
     "react-icons": "^4.9.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.12.0",
+    "react-type-animation": "^3.1.0",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.7.12",
     "swiper": "^9.3.2"

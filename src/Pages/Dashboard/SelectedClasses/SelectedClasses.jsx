@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import useSelectedClass from "../../../CustomHooks/useSelectedClass";
 
 
+
 const SelectedClasses = () => {
     const [selectedClass, refetch] = useSelectedClass();
     console.log(selectedClass);
@@ -44,7 +45,7 @@ const SelectedClasses = () => {
             <Helmet>
                 <title> Summer Edutainment | Selected Classes</title>
             </Helmet>
-
+          
 
             <SectionTitle
                 subheading={'My Selected'}
